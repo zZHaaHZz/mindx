@@ -34,6 +34,7 @@
             top: calc(100vh - 40% - 100px/2);
             left: calc((100% - 868px)/2);
             border-radius: 80px;
+            cursor: pointer;
         }
 
         #capuchino-img {
@@ -55,6 +56,7 @@
         }
 
         .pop-up {
+            display: none;
             width: 465px;
             height: 436px;
             border-radius: 8px;
@@ -63,8 +65,15 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scale(0.9);
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
 
+        .pop-up.show {
+            display: block;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
         }
 
         .rectangle1 {
@@ -90,6 +99,7 @@
             padding: 4px;
             padding-top: 0;
             gap: 10px;
+            cursor: pointer;
         }
 
         .frame1039 {
@@ -124,58 +134,40 @@
             left: 23px;
             width: 385px;
             height: 104px;
-    
         }
 
         .frame1123 input {
-            padding: 0;
-            margin: 0;
             width: 385px;
-            height: fixed(44px);
             border: 1px solid #D1D1D1;
             border-radius: 8px;
             padding: 14px 16px;
         }
 
         .frame1123 button {
-            padding: 0;
-            margin: 0;
             width: 420px;
-            height: fixed(44px);
             border-radius: 8px;
             background-color: #4F4F4F;
             padding: 14px 16px;
-            gap: 10px;
             font-size: 14px;
             color: #f5f5f5;
             border: none;
             margin-top: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="white-background">
-            <!-- Hiển thị phần background màu trắng -->
-        </div>
-
-        <div class="black-background">
-            <!-- Hiển thị phần background màu đen -->
-        </div>
-        <div class="btn-show-pop-up">
-            <!-- Button sử dụng để show pop up -->
-        </div>
-
+        <div class="white-background"></div>
+        <div class="black-background"></div>
+        <button class="btn-show-pop-up"></button>
         <div class="image-coffe">
             <img id="capuchino-img" src="img/capuchino.png" alt="">
-            <!-- Hiển thị ảnh cho 2 cốc coffe -->
-
             <img id="espresso-img" src="img/espresso.png" alt="">
         </div>
-
-
     </div>
+
     <div class="pop-up">
         <div class="frame1040">✖</div>
         <div class="rectangle1"></div>
@@ -184,11 +176,34 @@
             <p>Leave your feedback here.</p>
         </div>
         <div class="frame1123">
-            <input type="text" name="" id="" placeholder="Type text" class="input"><br>
+            <input type="text" placeholder="Type text" class="input"><br>
             <button>Yeah, thanks!</button>
         </div>
-
     </div>
+
+    <script>
+        const geteventopen = document.querySelector(".btn-show-pop-up");
+        const popup = document.querySelector(".pop-up");
+        const closeBtn = document.querySelector(".frame1040");
+
+
+        geteventopen.onclick = function () {
+            popup.style.display = "block";
+            requestAnimationFrame(() => {
+                popup.classList.add("show");
+            });
+        };
+
+
+        closeBtn.onclick = function () {
+            popup.classList.remove("show");
+
+            setTimeout(() => {
+                popup.style.display = "none";
+            }, 300);
+        };
+    </script>
+
 </body>
 
 </html>
