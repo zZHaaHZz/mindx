@@ -1,0 +1,133 @@
+footer{
+    margin-top: 30px;
+    width: 100%;
+    height: 382px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 80px;
+    background-color: rgba(26, 36, 52, 1);
+}
+.Frame48095562{
+    gap: 24px;
+    width: 345px;
+    height: 170px;
+    
+}
+.Frame48095561 img{
+    width: 42px;
+    height: 38px;
+}
+.Frame48095561{
+    width: 166px;
+    height: 38px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.Frame48095561 h3{
+    width: 116px;
+    height: 38px;
+    font-size: 27px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+}
+.Frame48095562 p{
+    color: rgba(255, 255, 255, 1);
+    width: 345px;
+    height: 108px;
+    opacity: 70%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 180%;
+}
+.Frame48095565{
+    width: 764px;
+    height: 222px;
+}
+.Frame48095565{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+.Frame48095563{
+    height: 222px;
+    width: 141px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Frame48095563 h3{
+    width: 141px;
+    height: 38px;
+    font-size: 27px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    font-style: unset;
+}
+.Frame48095568{
+    width: 95px;
+    height: 168px;
+    gap: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.Frame48095568 p{
+    width: 95px;
+    height: 36px;
+    opacity: 70%;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+}
+.Frame48095564{
+    width: 191px;
+    height: 178px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Frame48095564 h3{
+    width: 141px;
+    height: 38px;
+    font-size: 27px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    font-style: unset;
+}
+
+.Frame48095567 p{
+    width: 197px;
+    height: 36px;
+    opacity: 70%;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+}
+.oioioi{
+    width: 272px;
+    height: 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.oioioi h3{
+    width: 100%;
+    height: 38px;
+    font-size: 27px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+}
+.Frame48095566 a{
+    color: #FFF;
+}
+.Frame48095566{
+    width: 272px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+}
