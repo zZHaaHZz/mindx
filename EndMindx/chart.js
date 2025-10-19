@@ -1,0 +1,80 @@
+const ctx = document.getElementById('attendanceChart').getContext('2d');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [
+                {
+                    label: 'Blue',
+                    data: [60, 60, 50, 60, 70, 50, 55],
+                    backgroundColor: '#6c63ff',
+                    borderRadius: 15,
+                    borderSkipped: false,
+                    barThickness: 15,
+                },
+                {
+                    label: 'Yellow',
+                    data: [30, 20, 25, 30, 20, 25, 45],
+                    backgroundColor: '#ffb74d',
+                    borderRadius: 15,
+                    borderSkipped: false,
+                    barThickness: 20,
+                },
+                {
+                    label: 'Red',
+                    data: [10, 20, 25, 10, 10, 25, 10],
+                    backgroundColor: '#ef5350',
+                    borderRadius: 15,
+                    borderSkipped: false,
+                    barThickness: 20,
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    top: 10,
+                    bottom: 10,
+                },
+            },
+            scales: {
+                x: {
+                    stacked: false,
+                    grid: { display: false },
+                    border: { display: false },
+                    ticks: {
+                        color: '#444',
+                        font: { size: 13, weight: '500' },
+                    },
+                },
+                y: {
+                    stacked: false,
+                    grid: { color: '#e0e0e0' },
+                    border: { display: false },
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        stepSize: 20,
+                        color: '#666',
+                        callback: (value) => value + '%',
+                    },
+                },
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    enabled: true,
+                    backgroundColor: '#222',
+                    titleColor: '#fff',
+                    bodyColor: '#ddd',
+                    borderWidth: 1,
+                    borderColor: '#555',
+                },
+            },
+            barPercentage: 0.5,
+            categoryPercentage: 0.4,
+        },
+    });
