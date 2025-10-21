@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Lexend', sans-serif;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
-    
+
 }
-.container{
+
+.container {
     width: 1440px;
     height: 1586px;
     display: flex;
@@ -21,18 +23,20 @@ body{
     align-items: center;
 }
 
-.main-content{
+.main-content {
     width: 1140px;
     height: 1536px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.top-content{
+
+.top-content {
     width: 1080px;
     height: 994px;
 }
-.bot-content{
+
+.bot-content {
     width: 1080px;
     height: 522px;
     border: 1px solid #A2A1A833;
@@ -40,11 +44,12 @@ body{
     padding: 20px 20px 0px 20px;
     border-radius: 20px;
 }
+
 /* header */
 
 
 /* main content */
-.main-top-content{
+.main-top-content {
     width: 1080px;
     height: auto;
     display: flex;
@@ -53,26 +58,29 @@ body{
     gap: 20px;
     margin-left: 30px;
 }
+
 /* left  */
-.left-main-top-content{
+.left-main-top-content {
     width: 646px;
     height: 882px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 /* top-left */
-.top-left-main-top-content{
+.top-left-main-top-content {
     width: 646px;
     height: 328px;
     border: none;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 20px; 
-    row-gap: 20px; 
+    column-gap: 20px;
+    row-gap: 20px;
 }
+
 /* parameter */
-.parameter{
+.parameter {
     width: 313px;
     height: 154px;
     border: 1px solid #A2A1A833;
@@ -81,10 +89,12 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
-.top-parameter i{
+
+.top-parameter i {
     color: #7152F3;
 }
-.top-parameter{
+
+.top-parameter {
     padding: 5px 20px;
     width: 100%;
     height: 50px;
@@ -95,7 +105,8 @@ body{
     gap: 10px;
     font-size: 14px;
 }
-.box-i{
+
+.box-i {
     width: 40px;
     height: 40px;
     background-color: #7152F30D;
@@ -104,10 +115,12 @@ body{
     align-items: center;
     border-radius: 5px;
 }
+
 .top-parameter i {
     font-size: 20px;
 }
-.center-parameter{
+
+.center-parameter {
     padding: 0px 20px;
     width: 100%;
     height: 40px;
@@ -116,18 +129,21 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.center-parameter h2{
+
+.center-parameter h2 {
     font: bold;
     font-size: 30px;
 }
-.bottom-parameter{
+
+.bottom-parameter {
     padding: 0px 20px;
     width: 100%;
     height: 40px;
     padding-top: 12px;
     font-size: 12px;
 }
-.component{
+
+.component {
     width: 60px;
     height: 26px;
     background-color: #30BE821A;
@@ -138,21 +154,24 @@ body{
     border-radius: 5px;
     padding: 5px;
 }
+
 /* end .parameter */
 /* char */
-.bottom-left-main-top-content{
+.bottom-left-main-top-content {
     width: 646px;
     height: 534px;
     border: 1px solid #A2A1A833;
     border-radius: 20px;
 }
-.cation-chart{
+
+.cation-chart {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
     padding: 10px 20px;
 }
+
 .dropdown {
     padding: 6px 12px;
     border: 1px solid #ddd;
@@ -161,21 +180,24 @@ body{
     cursor: pointer;
     font-size: 14px;
 }
+
 .chart-wrapper {
     position: relative;
     height: 400px;
 }
+
 /* end char */
 /* .right-main-top-content */
-.right-main-top-content{
+.right-main-top-content {
     width: 414px;
     height: 882px;
     border: 1px solid #A2A1A833;
     border-radius: 20px;
 }
+
 /* my schedule */
 /* calendar */
-.box-calendar{
+.box-calendar {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -183,7 +205,8 @@ body{
     height: 420px;
     padding: 20px;
 }
-.caption-calendar{
+
+.caption-calendar {
     width: 100%;
     height: 50px;
     display: flex;
@@ -191,40 +214,48 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.box-caption-calendar i{
+
+.box-caption-calendar i {
     color: #7152F3;
     font-size: 18px;
 }
-.box-caption-calendar{
+
+.box-caption-calendar {
     width: 50px;
     height: 50px;
     background-color: #7152F31A;
     border-radius: 5px;
-    padding: 15px 16px;  
-}.calendar{
+    padding: 15px 16px;
+}
+
+.calendar {
     width: 100%;
     margin-bottom: 30px;
 }
-.caption-table{
+
+.caption-table {
     width: 1040px;
     height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.table-calendar{
+
+.table-calendar {
     width: 100%;
     padding-top: 10px;
     font-size: 24px;
     margin-top: 20px;
 }
-.td-calendar{
+
+.td-calendar {
     margin-top: 5px;
     width: 30px;
     height: 40px;
     text-align: center;
 }
-.reschedule{
+
+.reschedule {
     height: 34px;
     width: 100%;
     display: flex;
@@ -232,24 +263,40 @@ body{
     justify-content: space-between;
     margin-top: 20px;
 }
-.btn-reschedule{
+
+.btn-reschedule {
+    /* Size=Small, Type=Fill, State=Icon */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+
     width: 34px;
     height: 34px;
-    background-color: #7152F3;
-    border-radius: 4px;
-    text-align: center;
-    padding-top: 8px;
-    color: #ffffff;
+
+    /* Primary-500 */
+    background: #7152F3;
+    border-radius: 10px;
+
+    color: #FFF;
+
 }
+
 .hr-break {
-  width: 100%;
-  height: 3px;
-  background-color: #A2A1A81A; /* hoặc rgba(128,128,128,0.2) */
-  display: block;
-  border: none;
+    width: 100%;
+    height: 3px;
+    background-color: #A2A1A81A;
+    /* hoặc rgba(128,128,128,0.2) */
+    display: block;
+    border: none;
 }
+
 /* end calendar */
-.time-line{
+.time-line {
     width: 100%;
     height: 100%;
     margin-top: 40px;
@@ -258,20 +305,24 @@ body{
     justify-content: space-between;
     gap: 20px;
 }
-.time-calendar{
+
+.time-calendar {
     width: 100%;
     height: 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.time-calendar p{
+
+.time-calendar p {
     font-size: 16px;
 }
-.time-calendar i{
+
+.time-calendar i {
     font-size: 24px;
 }
-.time-line-clendar{
+
+.time-line-clendar {
     width: 266px;
     height: 51px;
     display: flex;
@@ -279,41 +330,49 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.time-meeting{
+
+.time-meeting {
     width: 100%;
 }
-.time-hour{
+
+.time-hour {
     width: 49px;
     height: 26px;
 }
-.time-hour h2{
+
+.time-hour h2 {
     font-size: 15px;
 }
-.time-meeting h2{
+
+.time-meeting h2 {
     font-size: 15px;
 }
-.line{
+
+.line {
     width: 51px;
     height: 2px;
     background: linear-gradient(to right, #7152F3 0%, #7152F300 100%);
     transform: rotate(90deg);
     transform-origin: center;
 }
+
 /* end chedule */
 /* char */
-.bottom-left-main-top-content{
+.bottom-left-main-top-content {
     width: 646px;
     height: 534px;
     border: 1px solid #A2A1A833;
     border-radius: 20px;
 }
-.cation-chart{
+
+.cation-chart {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
     padding: 10px 20px;
 }
+
 .dropdown {
     padding: 6px 12px;
     border: 1px solid #ddd;
@@ -322,23 +381,27 @@ body{
     cursor: pointer;
     font-size: 14px;
 }
+
 .chart-wrapper {
     position: relative;
     height: 400px;
 }
-/* end char */ 
+
+/* end char */
 
 /* table dashborad */
-.table-dasboard{
+.table-dasboard {
     margin-top: 20px;
     width: 1040px;
 }
-.th-head{
+
+.th-head {
     color: #A2A1A8;
     font-size: 16px;
     padding: 5px 0px;
 }
-.td-name{
+
+.td-name {
     width: 150px;
     height: 44px;
     display: flex;
@@ -347,11 +410,13 @@ body{
     align-items: center;
     gap: 10px;
 }
-.td-tbl-db{
+
+.td-tbl-db {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.box-td-stt-green{
+
+.box-td-stt-green {
     width: 70px;
     height: 30px;
     background-color: #3FC28A1A;
@@ -360,7 +425,8 @@ body{
     font-size: 16px;
     padding: 5px 10px;
 }
-.box-td-stt-red{
+
+.box-td-stt-red {
     width: 50px;
     height: 30px;
     background-color: #F45B691A;
@@ -369,27 +435,35 @@ body{
     font-size: 16px;
     padding: 5px 10px;
 }
-.th-des{
+
+.th-des {
     width: 258px;
 }
-.td-des{
-   width: 258px;
+
+.td-des {
+    width: 258px;
 }
-.th-type{
+
+.th-type {
     width: 162px;
 }
-.td-type{
+
+.td-type {
     width: 162px;
 }
-.th-time{
+
+.th-time {
     width: 192px;
 }
-.td-time{
+
+.td-time {
     width: 192px;
 }
-.td-body{
+
+.td-body {
     width: 1040px;
     width: 44px;
-    
+
 }
+
 /* end */
