@@ -1,7 +1,5 @@
-
-
-.siderbar{
-    margin-top: 40px;
+#siderbar{
+    margin-top: 20px;
     width: 280px;
     height: 100%;
     border-radius: 20px;
@@ -9,7 +7,10 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
-    border: 1px solid #A2A1A833;
+    background-color: #A2A1A80D;
+}
+.siderbar{
+    height: 100%;
 }
 .top-siderbar{
     width: 220px;

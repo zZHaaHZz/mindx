@@ -1,24 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  z-index: 1000;
+  width: 383px;
+  height: 540px;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Lexend', sans-serif;
+.popup.show {
+  display: block;
 }
-body{
-    display: flex;
-    justify-content: center;
-    
-}
+
 .container-employee{
-    width: 1440px;
     height: 1024px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    transition: filter 0.3s ease; 
 }
 .center-main-content-emloyee{
     padding: 20px;
@@ -68,6 +74,7 @@ body{
     align-items: center;
     font-size: 16px;
     gap: 5px;
+    border-radius: 10px;
 }
 /* table */
 .td-name img{
