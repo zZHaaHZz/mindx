@@ -1,12 +1,11 @@
 function initEmployeePage() {
-    console.log("Employee page loaded ✅");
+  console.log("Employee page loaded ✅");
 
-    // ========== 1️⃣ Render danh sách nhân viên ==========
-    const tbody = document.getElementById("employee-body");
-    if (tbody) {
-        tbody.innerHTML = "";
-        for (let i = 1; i <= 12; i++) {
-            tbody.innerHTML += `
+  const tbody = document.getElementById("employee-body");
+  if (tbody) {
+    tbody.innerHTML = "";
+    for (let i = 1; i <= 12; i++) {
+      tbody.innerHTML += `
         <tr class="td-body">
           <td class="td-tbl-emp td-name"><img src="img/avatar.jpg" alt=""><p>Bùi Quang Hà ${i}</p></td>
           <td class="td-tbl-emp td-id">${345321000 + i}</td>
@@ -15,48 +14,51 @@ function initEmployeePage() {
           <td class="td-tbl-emp td-type">Office</td>
           <td class="td-tbl-emp td-status"><div class="box-td-stt-permanent">Permanent</div></td>
           <td class="td-tbl-emp td-acction">
-            <i class="fa-solid fa-eye"></i>
+            <i class="fa-solid fa-eye view-employee" data-id="${i}" title="Xem chi tiết"></i>
             <i class="fa-solid fa-pen"></i>
             <i class="fa-solid fa-trash"></i>
           </td>
         </tr>`;
-        }
     }
+  }
 
-    // ========== 2️⃣ Sự kiện mở / đóng Popup Filter ==========
-    const filterBtn = document.querySelector(".fillter");
-    const popup = document.getElementById("popup");
-    const container = document.querySelector(".main-content-emloyee");
-    const closePopup = document.getElementById("closePopup");
-    const applyPopup = document.getElementById("applyPopup");
+  // === Xử lý popup filter ===
+  const filterBtn = document.querySelector(".fillter");
+  const popup = document.getElementById("popup");
+  const contentWrapper = document.querySelector(".index-container");
+  const closePopup = document.getElementById("closePopup");
+  const applyPopup = document.getElementById("applyPopup");
+  const siderbar = document.getElementById("siderbar");
 
-    if (filterBtn && popup && container) {
-        filterBtn.addEventListener("click", () => {
-            popup.classList.add("show");
-            container.style.filter = "blur(6px)";
-        });
-    }
+  const openPopup = () => {
+    popup?.classList.add("show");
+    contentWrapper?.style.setProperty("filter", "blur(6px)");
+    siderbar?.style.setProperty("filter", "blur(6px)");
+  };
+  const closePopupFunc = () => {
+    popup?.classList.remove("show");
+    contentWrapper?.style.setProperty("filter", "none");
+    siderbar?.style.setProperty("filter", "none");
+  };
 
-    if (closePopup) {
-        closePopup.addEventListener("click", () => {
-            popup.classList.remove("show");
-            container.style.filter = "none";
-        });
-    }
+  filterBtn?.addEventListener("click", openPopup);
+  closePopup?.addEventListener("click", closePopupFunc);
+  applyPopup?.addEventListener("click", closePopupFunc);
 
-    if (applyPopup) {
-        applyPopup.addEventListener("click", () => {
-            popup.classList.remove("show");
-            container.style.filter = "none";
-        });
-    }
+  // === Nút thêm nhân viên ===
+  const addBtn = document.querySelector(".btn-add-emloyee");
+  addBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    loadPage("./add-employee/07.html");
+  });
 
-    // ========== 3️⃣ Nút Add New Employee ==========
-    const addBtn = document.querySelector(".btn-add-emloyee");
-    if (addBtn) {
-        addBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            loadPage("./07.html"); // Load trang 07 vào content
-        });
-    }
+  // === Nút xem chi tiết nhân viên (fa-eye) ===
+  const viewBtns = document.querySelectorAll(".view-employee");
+  viewBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const id = e.target.dataset.id; // có thể truyền id vào trang 12 nếu cần
+      console.log("👁 Xem thông tin nhân viên ID:", id);
+      loadPage("./show-employee/12.html");
+    });
+  });
 }
