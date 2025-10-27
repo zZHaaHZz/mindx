@@ -2,7 +2,7 @@
 
 .main-content {
     width: 1140px;
-    height: 1536px;
+    height: 1586px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10,7 +10,7 @@
 
 .top-content {
     width: 1080px;
-    height: 994px;
+    height: 882px;
 }
 
 .bot-content {

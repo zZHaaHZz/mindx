@@ -1,16 +1,13 @@
 #siderbar{
     margin-top: 20px;
     width: 280px;
-    height: 100%;
+    height: auto;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
     background-color: #A2A1A80D;
-}
-.siderbar{
-    height: 100%;
 }
 .top-siderbar{
     width: 220px;
