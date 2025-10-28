@@ -26,9 +26,9 @@
       position: absolute;
       top: 3px;
       left: -15px;
-      /* animation-name: slide-left-to-right;
-      animation-duration: 3s;
-      opacity: 0; */
+      animation-name: slide-left-to-right;
+      animation-duration: 2s;
+      opacity: 0;
       animation-iteration-count: infinite;
     }
 
@@ -58,11 +58,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* animation-name: box-slide-left-to-right; */
-      /* animation-duration: 3s;
-      animation-delay: 0s; */
-      /* opacity: 0; */
+      animation-name: box-slide-left-to-right;
+      animation-duration: 2s;
+      animation-delay: 0s;
+      opacity: 0;
       animation-iteration-count: infinite;
+      transition-timing-function: linear;
+      transition-timing-function: ease;
     }
 
     @keyframes box-slide-left-to-right {
@@ -76,6 +78,7 @@
         left: 0px;
         top: 0px;
         opacity: 0;
+
       }
     }
 
@@ -136,13 +139,13 @@
     .phone {
       width: 400px;
       height: 700px;
-      /* background-color: blueviolet; */
+      background-color: blueviolet;
       border: 1px solid black;
       border-radius: 30px;
       z-index: 9;
     }
 
-    .giaothuc {
+    .ketnoi {
       position: absolute;
       width: 402px;
       height: 400px;
@@ -207,7 +210,8 @@
     <div class="sticker2"></div>
     <div class="phone"></div>
 
-    <div class="giaothuc">
+
+    <div class="ketnoi">
       <div class="item">
         <div class="icon">
           <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/ani_call.svg" alt="icon">
@@ -256,5 +260,4 @@
     <div class="phone"></div>
   </div>
 </body>
-
 </html>
