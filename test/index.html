@@ -1,13 +1,260 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Import Multiple HTML</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zalo OA</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f7f9fb;
+    }
+
+    .item {
+      position: relative;
+      width: 402px;
+      height: 80px;
+      overflow: hidden;
+    }
+
+    /* --- ICON --- */
+    .icon {
+      position: absolute;
+      top: 3px;
+      left: -15px;
+      /* animation-name: slide-left-to-right;
+      animation-duration: 3s;
+      opacity: 0; */
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes slide-left-to-right {
+      0% {
+        left: -50px;
+        top: 0px;
+        opacity: 1;
+      }
+
+      100% {
+        left: 450px;
+        top: 0px;
+        opacity: 0;
+      }
+    }
+
+    .icon img {
+      width: 50px;
+    }
+
+    /* --- BOX (line + number) --- */
+    .box {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* animation-name: box-slide-left-to-right; */
+      /* animation-duration: 3s;
+      animation-delay: 0s; */
+      /* opacity: 0; */
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes box-slide-left-to-right {
+      0% {
+        left: -400px;
+        top: 0px;
+        opacity: 1;
+      }
+
+      100% {
+        left: 0px;
+        top: 0px;
+        opacity: 0;
+      }
+    }
+
+    .number {
+      font-family: monospace;
+      font-size: 10px;
+      color: rgb(91, 91, 241);
+      opacity: 0.9;
+      filter: blur(0.6px);
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+
+      /* hiệu ứng quét sáng */
+      background: linear-gradient(90deg,
+          transparent 0%,
+          rgb(5, 5, 244) 100%,
+          transparent 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: revealText 2s linear infinite;
+    }
+
+    @keyframes revealText {
+      0% {
+        background-position: -100% 0;
+      }
+
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+
+    .line img {
+      width: 350px;
+      height: auto;
+    }
+
+    .reverse .line img {
+      transform: scaleX(-1);
+    }
+
+    .reverse .number {
+      transform: scaleX(-1);
+    }
+
+    .reverse {
+      margin-left: 38px;
+    }
+
+    .icon-reverse {
+      position: absolute;
+      top: 10px;
+      right: 30px;
+    }
+
+    .phone {
+      width: 400px;
+      height: 700px;
+      /* background-color: blueviolet; */
+      border: 1px solid black;
+      border-radius: 30px;
+      z-index: 9;
+    }
+
+    .giaothuc {
+      position: absolute;
+      width: 402px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid black;
+      z-index: -1;
+    }
+
+    .main-box {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 350px;
+    }
+
+    .sticker {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: blue;
+      top: -60px;
+      left: 350px;
+      z-index: -1;
+    }
+
+    .sticker1 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: rgb(235, 16, 169);
+      top: 200px;
+      left: -120px;
+      z-index: 9;
+    }
+
+    .sticker2 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: rgb(222, 22, 198);
+      bottom: -40px;
+      left: 500px;
+    }
+
+    .box-wrap {
+      width: 350px;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <div id="header"></div>
-        <div id="siderbar"></div>
+  <div class="main-box">
+    <div class="sticker"></div>
+    <div class="sticker1"></div>
+    <div class="sticker2"></div>
+    <div class="phone"></div>
+
+    <div class="giaothuc">
+      <div class="item">
+        <div class="icon">
+          <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/ani_call.svg" alt="icon">
+        </div>
+        <div class="box-wrap">
+          <div class="box">
+            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+            <div class="line">
+              <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/line.svg" alt="">
+            </div>
+            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item reverse">
+        <div class="icon-reverse">
+          <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/ani_mess.svg" alt="icon">
+        </div>
+        <div class="box">
+          <div class="box-wrap-rever">
+            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+            <div class="line">
+              <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/line.svg" alt="">
+            </div>
+            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="icon">
+          <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/ani_img.svg" alt="icon">
+        </div>
+        <div class="box-wrap">
+          <div class="box">
+            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+            <div class="line">
+              <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/line.svg" alt="">
+            </div>
+            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="phone"></div>
+  </div>
 </body>
+
 </html>
-<script src="main.js"></script>

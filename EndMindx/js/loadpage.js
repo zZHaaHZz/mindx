@@ -15,7 +15,7 @@ async function loadHTML(id, file) {
     console.error(`Lỗi loadHTML(${id}):`, err.message);
   }
 }
-
+//load main giao dien
 async function loadPage(file) {
   const content = document.getElementById("content-hrms");
   if (!content) return;
@@ -30,7 +30,7 @@ async function loadPage(file) {
     if (file.includes("05.html") && typeof initAttendanceChart === "function") setTimeout(initAttendanceChart, 50);
     if (file.includes("06.html") && typeof initEmployeePage === "function") setTimeout(initEmployeePage, 50);
     if (file.includes("07.html") && typeof initAddEmployeePage === "function") setTimeout(initAddEmployeePage, 50);
-    if (file.includes("12.html") && typeof initShowEmployeePage === "function") setTimeout(initShowEmployeePage, 50);
+    if (file.includes("19.html") && typeof initShowEmployeePage === "function") setTimeout(initShowEmployeePage, 50);
 
 
   } catch (err) {

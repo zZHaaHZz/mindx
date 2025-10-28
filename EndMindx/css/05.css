@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
 
 .main-content {
-    width: 1140px;
+    width: 1080px;
     height: 1586px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 
 .top-content {
@@ -15,9 +16,9 @@
 
 .bot-content {
     width: 1080px;
-    height: 522px;
+    height: 622px;
     border: 1px solid #A2A1A833;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     padding: 20px 20px 0px 20px;
     border-radius: 20px;
 }
@@ -32,8 +33,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 20px;
-    margin-left: 30px;
+    gap: 10px;
+    /* margin-left: 30px; */
 }
 
 /* left  */
@@ -171,7 +172,7 @@
 /* end char */
 /* .right-main-top-content */
 .right-main-top-content {
-    width: 414px;
+    width: 400px;
     height: 882px;
     border: 1px solid #A2A1A833;
     border-radius: 20px;
@@ -429,33 +430,32 @@
 
 
 .th-des {
-    width: 258px;
+    width: 250px;
 }
 
 .td-des {
-    width: 258px;
+    width: 250px;
 }
 
 .th-type {
-    width: 162px;
+    width: 160px;
 }
 
 .td-type {
-    width: 162px;
+    width: 160px;
 }
 
 .th-time {
-    width: 192px;
+    width: 180px;
 }
 
 .td-time {
-    width: 192px;
+    width: 180px;
 }
 
 .td-body {
-    width: 1040px;
-    width: 44px;
-
+    width: 1000px;
+    height: 50px;
 }
 
 /* end */
