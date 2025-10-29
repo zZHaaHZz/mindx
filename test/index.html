@@ -14,135 +14,15 @@
       background: #f7f9fb;
     }
 
-    .item {
-      position: relative;
-      width: 402px;
-      height: 80px;
-      overflow: hidden;
-    }
-
-    /* --- ICON --- */
-    .icon {
-      position: absolute;
-      top: 3px;
-      left: -15px;
-      animation-name: slide-left-to-right;
-      animation-duration: 2s;
-      opacity: 0;
-      animation-iteration-count: infinite;
-    }
-
-    @keyframes slide-left-to-right {
-      0% {
-        left: -50px;
-        top: 0px;
-        opacity: 1;
-      }
-
-      100% {
-        left: 450px;
-        top: 0px;
-        opacity: 0;
-      }
-    }
-
-    .icon img {
-      width: 50px;
-    }
-
-    /* --- BOX (line + number) --- */
-    .box {
-      position: absolute;
-      top: 10px;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      animation-name: box-slide-left-to-right;
-      animation-duration: 2s;
-      animation-delay: 0s;
-      opacity: 0;
-      animation-iteration-count: infinite;
-      transition-timing-function: linear;
-      transition-timing-function: ease;
-    }
-
-    @keyframes box-slide-left-to-right {
-      0% {
-        left: -400px;
-        top: 0px;
-        opacity: 1;
-      }
-
-      100% {
-        left: 0px;
-        top: 0px;
-        opacity: 0;
-
-      }
-    }
-
-    .number {
-      font-family: monospace;
-      font-size: 10px;
-      color: rgb(91, 91, 241);
-      opacity: 0.9;
-      filter: blur(0.6px);
-      white-space: nowrap;
-      position: relative;
-      overflow: hidden;
-
-      /* hiệu ứng quét sáng */
-      background: linear-gradient(90deg,
-          transparent 0%,
-          rgb(5, 5, 244) 100%,
-          transparent 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: revealText 2s linear infinite;
-    }
-
-    @keyframes revealText {
-      0% {
-        background-position: -100% 0;
-      }
-
-      100% {
-        background-position: 100% 0;
-      }
-    }
-
-
-    .line img {
-      width: 350px;
-      height: auto;
-    }
-
-    .reverse .line img {
-      transform: scaleX(-1);
-    }
-
-    .reverse .number {
-      transform: scaleX(-1);
-    }
-
-    .reverse {
-      margin-left: 38px;
-    }
-
-    .icon-reverse {
-      position: absolute;
-      top: 10px;
-      right: 30px;
-    }
-
+    /* --- Phone, Background Elements --- */
     .phone {
       width: 400px;
       height: 700px;
       background-color: blueviolet;
-      border: 1px solid black;
+
       border-radius: 30px;
       z-index: 9;
+      box-shadow: 0 0 50px 2px rgba(183, 183, 240, 0.6);
     }
 
     .ketnoi {
@@ -152,7 +32,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border: 1px solid black;
+
       z-index: -1;
     }
 
@@ -166,6 +46,214 @@
     }
 
     .sticker {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      /* background-color: blue; */
+      top: -60px;
+      left: 350px;
+      z-index: -1;
+    }
+
+    .sticker1 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      /* background-color: rgb(235, 16, 169); */
+      top: 200px;
+      left: -120px;
+      z-index: 9;
+    }
+
+    .sticker2 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      /* background-color: rgb(222, 22, 198); */
+      bottom: -40px;
+      left: 500px;
+    }
+
+    .box-wrap {
+      width: 350px;
+      height: 80px;
+
+      position: absolute;
+      right: 25px;
+      top: 0px;
+      background-color: rgb(252, 252, 252);
+      animation-name: myAnimation;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes myAnimation {
+      0% {
+        left: 25px;
+      }
+
+      100% {
+        left: 400px;
+      }
+    }
+
+    .item {
+      width: 402px;
+      height: 80px;
+      position: relative;
+      padding-top: 15px;
+    }
+
+    .icon {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 10px;
+      top: 20px;
+      z-index: 2;
+      animation-name: icon;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+
+      box-shadow: 0 0 50px 5px rgba(183, 183, 240, 0.6);
+    }
+
+    @keyframes icon {
+      0% {
+        left: 0px;
+      }
+
+      100% {
+        left: 370px;
+      }
+    }
+
+    .number {
+      font-family: monospace;
+      font-size: 11px;
+      color: rgb(91, 91, 241);
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Hiệu ứng hiện dần từ trái sang phải */
+    .number::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to right,
+          rgba(255, 255, 255, 1) 20%,
+          rgba(255, 255, 255, 0) 80%);
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-delay: 0.3s;
+
+    }
+
+    /* Làm cho lớp phủ chạy sang phải */
+    @keyframes reveal {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .number {
+      margin-left: 80px;
+      border: none;
+    }
+
+    /* rever */
+    .number-rever {
+      transform: scaleX(-1);
+      font-family: monospace;
+      font-size: 11px;
+      color: rgb(91, 91, 241);
+      margin-right: 80px;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .number-rever::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to right,
+          rgba(255, 255, 255, 1) 20%,
+          rgba(255, 255, 255, 0) 80%);
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-delay: 0.3s;
+
+    }
+
+    .item reverse {
+      width: 402px;
+      height: 80px;
+      position: relative;
+      padding-top: 15px;
+    }
+
+    .icon-reverse {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 10px;
+      top: 20px;
+      z-index: 2;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-name: icon-rever;
+      box-shadow: 0 0 50px 5px rgba(183, 183, 240, 0.6);
+    }
+      @keyframes icon-rever {
+      0% {
+        right: 0px;
+      }
+
+      100% {
+        right: 370px;
+      }
+    }
+    .box-wrap-rever {
+      width: 350px;
+      height: 80px;
+
+      position: absolute;
+      right: 25px;
+      top: 0px;
+      background-color: white;
+      animation-name: box-wrap-rever;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes box-wrap-rever {
+      0% {
+        right: 25px;
+      }
+
+      100% {
+        right: 400px;
+      }
+    }
+        .sticker {
       position: absolute;
       width: 100px;
       height: 100px;
@@ -196,11 +284,8 @@
       bottom: -40px;
       left: 500px;
     }
-
-    .box-wrap {
-      width: 350px;
-    }
   </style>
+
 </head>
 
 <body>
@@ -216,29 +301,27 @@
         <div class="icon">
           <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/ani_call.svg" alt="icon">
         </div>
-        <div class="box-wrap">
-          <div class="box">
-            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
-            <div class="line">
-              <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/line.svg" alt="">
-            </div>
-            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+        <div class="box">
+          <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</div>
+          <div class="line">
+            <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/line.svg" alt="">
           </div>
+          <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</div>
         </div>
+        <div class="box-wrap"></div>
       </div>
 
       <div class="item reverse">
         <div class="icon-reverse">
           <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/ani_mess.svg" alt="icon">
         </div>
-        <div class="box">
-          <div class="box-wrap-rever">
-            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
-            <div class="line">
-              <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/line.svg" alt="">
-            </div>
-            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+        <div class="box-rever">
+          <div class="number-rever">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+          <div class="line">
+            <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/line.svg" alt="">
           </div>
+          <div class="number-rever">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+          <div class="box-wrap-rever"></div>
         </div>
       </div>
 
@@ -246,18 +329,19 @@
         <div class="icon">
           <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/ani_img.svg" alt="icon">
         </div>
-        <div class="box-wrap">
-          <div class="box">
-            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
-            <div class="line">
-              <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/line.svg" alt="">
-            </div>
-            <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+
+        <div class="box">
+          <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
+          <div class="line">
+            <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/line.svg" alt="">
           </div>
+          <div class="number">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
         </div>
+        <div class="box-wrap"></div>
       </div>
     </div>
     <div class="phone"></div>
   </div>
 </body>
+
 </html>
