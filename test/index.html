@@ -45,41 +45,10 @@
       gap: 350px;
     }
 
-    .sticker {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      /* background-color: blue; */
-      top: -60px;
-      left: 350px;
-      z-index: -1;
-    }
-
-    .sticker1 {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      /* background-color: rgb(235, 16, 169); */
-      top: 200px;
-      left: -120px;
-      z-index: 9;
-    }
-
-    .sticker2 {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      /* background-color: rgb(222, 22, 198); */
-      bottom: -40px;
-      left: 500px;
-    }
-
     .box-wrap {
+      margin-top: 12.5px;
       width: 350px;
-      height: 80px;
+      height: 50px;
 
       position: absolute;
       right: 25px;
@@ -222,7 +191,8 @@
       animation-name: icon-rever;
       box-shadow: 0 0 50px 5px rgba(183, 183, 240, 0.6);
     }
-      @keyframes icon-rever {
+
+    @keyframes icon-rever {
       0% {
         right: 0px;
       }
@@ -231,9 +201,11 @@
         right: 370px;
       }
     }
+
     .box-wrap-rever {
+      margin-top: 10px;
       width: 350px;
-      height: 80px;
+      height: 50px;
 
       position: absolute;
       right: 25px;
@@ -253,7 +225,8 @@
         right: 400px;
       }
     }
-        .sticker {
+
+    .sticker {
       position: absolute;
       width: 100px;
       height: 100px;
@@ -283,6 +256,10 @@
       background-color: rgb(222, 22, 198);
       bottom: -40px;
       left: 500px;
+    }
+
+    .line-rever img {
+      transform: scaleX(-1);
     }
   </style>
 
@@ -317,7 +294,7 @@
         </div>
         <div class="box-rever">
           <div class="number-rever">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
-          <div class="line">
+          <div class="line-rever">
             <img src="https://stc-oa.zdn.vn/resources/zoa-landing/v122023/images/home/line.svg" alt="">
           </div>
           <div class="number-rever">1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</div>
@@ -343,5 +320,4 @@
     <div class="phone"></div>
   </div>
 </body>
-
 </html>
