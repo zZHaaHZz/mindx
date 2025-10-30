@@ -10,8 +10,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 100%;
       background: #f7f9fb;
+      flex-direction: column;
+      gap: 60px;
     }
 
     /* --- Phone, Background Elements --- */
@@ -57,6 +59,8 @@
       animation-name: myAnimation;
       animation-duration: 3s;
       animation-iteration-count: infinite;
+      filter: blur(4px);
+
     }
 
     @keyframes myAnimation {
@@ -214,6 +218,7 @@
       animation-name: box-wrap-rever;
       animation-duration: 3s;
       animation-iteration-count: infinite;
+      filter: blur(4px);
     }
 
     @keyframes box-wrap-rever {
@@ -261,6 +266,18 @@
     .line-rever img {
       transform: scaleX(-1);
     }
+    .menu-container{
+      margin-top: 300px;
+    }
+    .menu{
+      width: 500px;
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      justify-content: space-between;
+    }
+
+
   </style>
 
 </head>
@@ -319,5 +336,70 @@
     </div>
     <div class="phone"></div>
   </div>
+
+  <div class="menu-container">
+    <ul class="menu">
+      <li class="active" data-target="content1">Sieu nhan do</li>
+      <li data-target="content2">Sieu nhan xanh</li>
+      <li data-target="content3">Sieu nhan vang</li>
+      <li data-target="content4">Sieu nhan den</li>
+    </ul>
+
+    <div id="main-content" class="main-content">Insert 1</div>
+
+    <div class="content content1">
+      <img
+        src="https://scontent.fhan5-9.fna.fbcdn.net/v/t1.6435-9/102261488_3013160935447101_2486117098089648848_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH5tfkRnOsFz-yazg5dqGbHbd0evSjrMeNt3R69KOsx48riVpW9PyJoUnCwernEQoMPpDL_fAvOAZLGNBUPnKQl&_nc_ohc=eUxEV9o5jNoQ7kNvwGHhj_w&_nc_oc=AdkVKu_12Foe5k6aZUBIfM-hbU5H9b1MoNFymVGHnHEMK8l8pyXv8alP4MP-bIqfa6M&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=FFFrIJ8aZT48qdftUviDdw&oh=00_AffAtFMbSJJxftDjRgxxYebfEnhlW_QsIpBiZG8y8t42gQ&oe=69290CAE"
+        alt="">
+    </div>
+    <div class="content content2">
+      <!-- <img
+        src="https://scontent.fhan5-9.fna.fbcdn.net/v/t1.6435-9/102261488_3013160935447101_2486117098089648848_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH5tfkRnOsFz-yazg5dqGbHbd0evSjrMeNt3R69KOsx48riVpW9PyJoUnCwernEQoMPpDL_fAvOAZLGNBUPnKQl&_nc_ohc=eUxEV9o5jNoQ7kNvwGHhj_w&_nc_oc=AdkVKu_12Foe5k6aZUBIfM-hbU5H9b1MoNFymVGHnHEMK8l8pyXv8alP4MP-bIqfa6M&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=FFFrIJ8aZT48qdftUviDdw&oh=00_AffAtFMbSJJxftDjRgxxYebfEnhlW_QsIpBiZG8y8t42gQ&oe=69290CAE"
+        alt=""> -->
+    </div>
+    <div class="content content3">
+      <!-- <img
+        src="https://scontent.fhan5-9.fna.fbcdn.net/v/t1.6435-9/102261488_3013160935447101_2486117098089648848_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH5tfkRnOsFz-yazg5dqGbHbd0evSjrMeNt3R69KOsx48riVpW9PyJoUnCwernEQoMPpDL_fAvOAZLGNBUPnKQl&_nc_ohc=eUxEV9o5jNoQ7kNvwGHhj_w&_nc_oc=AdkVKu_12Foe5k6aZUBIfM-hbU5H9b1MoNFymVGHnHEMK8l8pyXv8alP4MP-bIqfa6M&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=FFFrIJ8aZT48qdftUviDdw&oh=00_AffAtFMbSJJxftDjRgxxYebfEnhlW_QsIpBiZG8y8t42gQ&oe=69290CAE"
+        alt=""> -->
+      </div>
+    <div class="content content4">
+      <!-- <img src="https://i.pinimg.com/1200x/a8/ea/51/a8ea51143c5c6f90fa98cc1b973fdda6.jpg"
+        alt=""> -->
+      </div>
+  </div>
+
 </body>
+<script>
+  const menuItems = document.querySelectorAll(".menu li");
+  const mainContent = document.getElementById("main-content");
+
+  // 🟦 Khi trang load: hiển thị content1 mặc định
+  window.addEventListener("DOMContentLoaded", () => {
+    const defaultContent = document.querySelector(".content1").innerHTML;
+    mainContent.innerHTML = defaultContent;
+  });
+
+  // 🟩 Xử lý khi click menu
+  menuItems.forEach(item => {
+    item.addEventListener("click", () => {
+      // Bỏ active cũ, thêm active mới
+      menuItems.forEach(li => li.classList.remove("active"));
+      item.classList.add("active");
+
+      // Lấy nội dung tương ứng
+      const target = item.getAttribute("data-target");
+      const content = document.querySelector(`.${target}`).innerHTML;
+
+      // Reset animation để chạy lại
+      mainContent.classList.remove("slide");
+      void mainContent.offsetWidth; // Trick reset animation
+
+      // Gán nội dung mới + hiệu ứng slide
+      mainContent.innerHTML = content;
+      mainContent.classList.add("slide");
+    });
+  });
+</script>
+
+
 </html>
